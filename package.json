@@ -32,8 +32,23 @@
     "trailingComma": "es5"
   },
   "name": "check-image-type",
-  "author": "阿豪boy",
+  "author": "ahaoboy",
   "module": "dist/check-image-type.esm.js",
+  "description": "Detect the image type of Buffer/Uint8Array",
+  "homepage": "https://github.com/ahaoboy/check-image-type",
+  "keywords": [
+    "image type",
+    "file type",
+    "uint8array",
+    "png",
+    "jpg",
+    "png",
+    "gif",
+    "bmp",
+    "webp",
+    "avif",
+    "heic"
+  ],
   "size-limit": [
     {
       "path": "dist/check-image-type.cjs.production.min.js",
