@@ -31,17 +31,24 @@ export const GIF = {
 export type GIF_TYPE = typeof GIF;
 
 export const AVIF = {
-  ext: "gif",
-  mime: "image/gif",
+  ext: "avif",
+  mime: "image/avif",
 } as const;
 export type AVIF_TYPE = typeof AVIF;
 
 export const HEIC = {
-  ext: "gif",
-  mime: "image/gif",
+  ext: "heic",
+  mime: "image/heic",
 } as const;
 export type HEIC_TYPE = typeof HEIC;
 
-export type ImageType = WEBP_TYPE | PNG_TYPE | JPG_TYPE | GIF_TYPE | BMP_TYPE | HEIC_TYPE;
+export type ImageType =
+  | WEBP_TYPE
+  | PNG_TYPE
+  | JPG_TYPE
+  | GIF_TYPE
+  | BMP_TYPE
+  | AVIF_TYPE
+  | HEIC_TYPE;
 export type ImageMime = ImageType["mime"];
 export type ImageExt = ImageType["ext"];

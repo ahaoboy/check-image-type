@@ -1,4 +1,4 @@
-import { ImageType, WEBP, JPG, PNG, GIF, BMP,AVIF } from "../src";
+import { ImageType, WEBP, JPG, PNG, GIF, BMP, AVIF, HEIC } from "../src";
 
 export const checkMap: [string, ImageType][] = [
   ["fixture.jpg", JPG],
@@ -7,5 +7,5 @@ export const checkMap: [string, ImageType][] = [
   ["fixture.gif", GIF],
   ["fixture.bmp", BMP],
   ["fixture-yuv420-8bit.avif", AVIF],
-  ["fixture-heic.heic", AVIF],
+  ["fixture-heic.heic", HEIC],
 ];

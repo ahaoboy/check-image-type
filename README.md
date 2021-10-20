@@ -2,13 +2,8 @@
 
 support jpg, png, gif, bmp, webp, avif, heic
 
-dist/check-image-type.cjs.production.min.js
-Size limit: 10 kB
-Size:       0 B   with all dependencies, minified and gzipped
+only 2.3k, zip 1k
 
-dist/check-image-type.esm.js
-Size limit: 10 kB
-Size:       23 B  with all dependencies, minified and gzipped
 # install
 
 ```
@@ -17,10 +12,12 @@ npm install check-image-type
 # usage
 
 ```
-import { checkImage, JPG } from 'check-image-type'
+import { checkImage, JPG, isJPG} from 'check-image-type'
 
 const buffer = readFileSync("test.jpg");
 expect(checkImage(buffer)).toEqual(JPG);
+
+assert(isJPG(buffer))
 ```
 
 # type
