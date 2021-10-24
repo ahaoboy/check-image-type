@@ -2,8 +2,6 @@
 
 support jpg, png, gif, bmp, webp, avif, heic
 
-only 2.3k, zip 1k
-
 # install
 
 ```
