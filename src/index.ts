@@ -37,11 +37,10 @@ const check = (
   data: number[],
   option?: Partial<Option>
 ): boolean => {
-  const { offset } = { ...option, ...defaultOption };
+  const { offset } = { ...defaultOption, ...option };
   const size = data.length;
-  const end = offset + size;
-  for (let i = offset; i < end; i++) {
-    if (buffer[i] !== data[i]) return false;
+  for (let i = 0; i < size; i++) {
+    if (buffer[i + offset] !== data[i]) return false;
   }
   return true;
 };
@@ -80,7 +79,7 @@ export const isJXR = (buffer: Input) => {
   return check(buffer, [0x49, 0x49, 0xbc]);
 };
 export const isFLIF = (buffer: Input) => {
-  if (!buffer || buffer.length < 3) {
+  if (!buffer || buffer.length < 4) {
     return false;
   }
   return checkString(buffer, "FLIF");
@@ -146,7 +145,7 @@ export const isHEIC = (buffer: Input) => {
     return false;
   }
   return (
-    checkString(buffer, "ftyp") &&
+    checkString(buffer, "ftyp", { offset: 4 }) &&
     (checkString(buffer, "mif1", { offset: 8 }) ||
       checkString(buffer, "msf1", { offset: 8 }) ||
       checkString(buffer, "heic", { offset: 8 }) ||

@@ -1,7 +1,28 @@
 # fork from [file-type](https://github.com/sindresorhus/file-type)
 
-support jpg, png, gif, bmp, webp, avif, heic
+support image type:  
+  WEBP,
+  JPG,
+  PNG,
+  GIF,
+  BMP,
+  AVIF,
+  HEIC,
+  BPG,
+  ICO,
+  PSD,
+  JXR,
+  FLIF,
+  ICNS,
+  ORF,
+  XCF,
+  RW2,
+  KTX,
+  JXL,
+  CUR,
+  RAF
 
+## only 4k gzipped:1.4k
 # install
 
 ```
