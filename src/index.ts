@@ -38,11 +38,7 @@ const check = (
   option?: Partial<Option>
 ): boolean => {
   const { offset } = { ...defaultOption, ...option };
-  const size = data.length;
-  for (let i = 0; i < size; i++) {
-    if (buffer[i + offset] !== data[i]) return false;
-  }
-  return true;
+  return data.every((v, k) => buffer[k + offset] === v);
 };
 
 const checkString = (buffer: Input, str: string, option?: Partial<Option>) => {
